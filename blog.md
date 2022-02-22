@@ -1,21 +1,22 @@
 ---
 layout: page
 title: Blog
-subtitle: Select ramblings of Pudhina
+subtitle: The best way to learn is teaching
+books-emoji: true
 ---
 
 <div>
     {% assign postsCategory = site.posts | group_by_exp:"post", "post.categories"  %}
     {% for category in postsCategory %}
-        <h4 class="post-teaser__month">
+        <h3 class="post-teaser__month">
             <strong>
                 {% if category.name %} 
-                    - - - - -  {{ category.name }} - - - - - 
+                    🌲 🌲 🌲 {{ category.name }} 🌲 🌲 🌲
                 {% else %} 
                     {{ Print }} 
                 {% endif %}
             </strong>
-        </h4>
+        </h3>
         <ul class="list-posts">
             {% for post in category.items %}
                 <li class="post-teaser">
